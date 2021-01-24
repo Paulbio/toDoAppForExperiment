@@ -69,7 +69,7 @@ app.post('/update-object', (req, res)=>{
 
 
 app.post('/delete-object', (req, res)=>{
-  database.collection('items').deleteOne({_id: new mongodb.ObjectID(req.body.id)}, {$set: {text: req.body.text}}, ()=>{
+  database.collection('items').deleteOne({_id: new mongodb.ObjectID(req.body.id)}, ()=>{
     res.send("")
   })
 })
